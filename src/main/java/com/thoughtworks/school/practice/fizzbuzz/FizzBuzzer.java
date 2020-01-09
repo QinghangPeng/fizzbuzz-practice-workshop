@@ -6,6 +6,9 @@ import java.util.List;
 public class FizzBuzzer {
 
   public String fizzbuzz(int number) {
+    if (String.valueOf(number).contains("3")) {
+      return "Fizz";
+    }
     List<String> resultCache = new ArrayList<>(3);
     if (number % 3 == 0) {
       resultCache.add("Fizz");

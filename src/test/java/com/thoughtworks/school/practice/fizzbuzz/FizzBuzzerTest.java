@@ -52,7 +52,7 @@ class FizzBuzzerTest {
 
   @Test
   void should_return_buzzwhizz_when_it_is_multiple_of_5_times_7() {
-    String result = fizzBuzzer.fizzbuzz(35);
+    String result = fizzBuzzer.fizzbuzz(70);
 
     assertEquals("BuzzWhizz", result);
   }
@@ -62,5 +62,12 @@ class FizzBuzzerTest {
     String result = fizzBuzzer.fizzbuzz(3 * 5 * 7);
 
     assertEquals("FizzBuzzWhizz", result);
+  }
+
+  @Test
+  void should_return_fizz_when_it_contains_3() {
+    String result = fizzBuzzer.fizzbuzz(13);
+
+    assertEquals("Fizz", result);
   }
 }
