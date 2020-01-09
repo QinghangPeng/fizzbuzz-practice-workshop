@@ -9,6 +9,9 @@ public class FizzBuzzer {
     if (number % (3 * 7) == 0) {
       return "FizzWhizz";
     }
+    if (number % (5 * 7) == 0) {
+      return "BuzzWhizz";
+    }
     if (number % 3 == 0) {
       return "Fizz";
     }
