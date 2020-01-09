@@ -21,4 +21,11 @@ class FizzBuzzerTest {
 
     assertEquals("Fizz", result);
   }
+
+  @Test
+  void should_return_buzz_when_it_is_multiple_of_5() {
+    String result = fizzBuzzer.fizzbuzz(5);
+
+    assertEquals("Buzz", result);
+  }
 }
