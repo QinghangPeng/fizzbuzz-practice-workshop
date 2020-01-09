@@ -3,6 +3,9 @@ package com.thoughtworks.school.practice.fizzbuzz;
 public class FizzBuzzer {
 
   public String fizzbuzz(int number) {
+    if (number % (3 * 5 * 7) == 0) {
+      return "FizzBuzzWhizz";
+    }
     if (number % (3 * 5) == 0) {
       return "FizzBuzz";
     }

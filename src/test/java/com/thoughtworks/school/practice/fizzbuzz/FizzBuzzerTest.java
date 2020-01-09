@@ -1,6 +1,6 @@
 package com.thoughtworks.school.practice.fizzbuzz;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -55,5 +55,12 @@ class FizzBuzzerTest {
     String result = fizzBuzzer.fizzbuzz(35);
 
     assertEquals("BuzzWhizz", result);
+  }
+
+  @Test
+  void should_return_fizzbuzzwhizz_when_it_is_multiple_of_3_times_5_times_7() {
+    String result = fizzBuzzer.fizzbuzz(3 * 5 * 7);
+
+    assertEquals("FizzBuzzWhizz", result);
   }
 }
