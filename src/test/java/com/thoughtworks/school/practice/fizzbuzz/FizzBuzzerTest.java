@@ -28,4 +28,11 @@ class FizzBuzzerTest {
 
     assertEquals("Buzz", result);
   }
+
+  @Test
+  void should_return_whizz_when_it_is_multiple_of_7() {
+    String result = fizzBuzzer.fizzbuzz(7);
+
+    assertEquals("Whizz", result);
+  }
 }
