@@ -1,29 +1,25 @@
 package com.thoughtworks.school.practice.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzer {
 
   public String fizzbuzz(int number) {
-    if (number % (3 * 5 * 7) == 0) {
-      return "FizzBuzzWhizz";
-    }
-    if (number % (3 * 5) == 0) {
-      return "FizzBuzz";
-    }
-    if (number % (3 * 7) == 0) {
-      return "FizzWhizz";
-    }
-    if (number % (5 * 7) == 0) {
-      return "BuzzWhizz";
-    }
+    List<String> resultCache = new ArrayList<>(3);
     if (number % 3 == 0) {
-      return "Fizz";
+      resultCache.add("Fizz");
     }
     if (number % 5 == 0) {
-      return "Buzz";
+      resultCache.add("Buzz");
     }
     if (number % 7 == 0) {
-      return "Whizz";
+      resultCache.add("Whizz");
     }
-    return String.valueOf(number);
+    if (resultCache.isEmpty()) {
+      return String.valueOf(number);
+    } else {
+      return String.join("", resultCache);
+    }
   }
 }
