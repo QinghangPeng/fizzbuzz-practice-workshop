@@ -14,4 +14,11 @@ class FizzBuzzerTest {
 
     assertEquals("4", result);
   }
+
+  @Test
+  void should_return_fizz_when_it_is_multiple_of_3() {
+    String result = fizzBuzzer.fizzbuzz(3);
+
+    assertEquals("Fizz", result);
+  }
 }
