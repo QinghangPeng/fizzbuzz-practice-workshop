@@ -7,3 +7,6 @@ build
 fizzbuzz-practice-workshop.iml
 fizzbuzz-practice-workshop.ipr
 fizzbuzz-practice-workshop.iws
+
+fizzbuzz-practice-workshop.main.iml
+fizzbuzz-practice-workshop.test.iml
