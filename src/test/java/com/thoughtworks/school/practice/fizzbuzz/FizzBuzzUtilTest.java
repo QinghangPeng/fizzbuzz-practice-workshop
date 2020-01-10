@@ -33,4 +33,11 @@ class FizzBuzzUtilTest {
 
     assertEquals("Whizz", result);
   }
+
+  @Test
+  void should_return_fizz_buzz_when_the_number_is_divided_by_3_times_5_and_does_not_contain_3_5_7() {
+    String result = FizzBuzzUtil.fizzbuzz(60);
+
+    assertEquals("FizzBuzz", result);
+  }
 }
