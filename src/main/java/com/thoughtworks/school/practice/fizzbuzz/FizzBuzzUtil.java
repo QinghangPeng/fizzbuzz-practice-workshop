@@ -1,29 +1,25 @@
 package com.thoughtworks.school.practice.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzUtil {
 
+  private static final String FIZZ = "Fizz";
+  private static final String BUZZ = "Buzz";
+  private static final String WHIZZ = "Whizz";
+
   public static String fizzbuzz(int number) {
-    if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
-      return "FizzBuzzWhizz";
-    }
-    if (number % 3 == 0 && number % 5 == 0) {
-      return "FizzBuzz";
-    }
-    if (number % 3 == 0 && number % 7 == 0) {
-      return "FizzWhizz";
-    }
-    if (number % 5 == 0 && number % 7 == 0) {
-      return "BuzzWhizz";
-    }
+    List<String> result = new ArrayList<>();
     if (number % 3 == 0) {
-      return "Fizz";
+      result.add(FIZZ);
     }
     if (number % 5 == 0) {
-      return "Buzz";
+      result.add(BUZZ);
     }
     if (number % 7 == 0) {
-      return "Whizz";
+      result.add(WHIZZ);
     }
-    return String.valueOf(number);
+    return result.isEmpty() ? String.valueOf(number) : String.join("", result);
   }
 }
