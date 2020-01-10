@@ -75,4 +75,11 @@ class FizzBuzzUtilTest {
 
     assertEquals("BuzzWhizz", result);
   }
+
+  @Test
+  void should_return_fizz_whizz_when_the_number_contains_7_and_is_divided_by_3_5_7() {
+    String result = FizzBuzzUtil.fizzbuzz(735);
+
+    assertEquals("FizzWhizz", result);
+  }
 }

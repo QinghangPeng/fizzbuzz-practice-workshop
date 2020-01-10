@@ -14,16 +14,17 @@ public class FizzBuzzUtil {
     String numberString = String.valueOf(number);
     boolean contains3 = numberString.contains("3");
     boolean contains5 = numberString.contains("5");
-    if (contains3 && !contains5) {
+    boolean contains7 = numberString.contains("7");
+    if (contains3 && (!contains5 || contains7)) {
       result.add(FIZZ);
     }
-    if (number % 3 == 0 && !contains3 && !contains5) {
+    if (number % 3 == 0 && !contains3 && (!contains5 || contains7)) {
       result.add(FIZZ);
     }
-    if (number % 5 == 0 && (contains5 || !contains3)) {
+    if (number % 5 == 0 && !contains7 && (contains5 || !contains3)) {
       result.add(BUZZ);
     }
-    if (number % 7 == 0 && (contains5 || !contains3)) {
+    if (number % 7 == 0 && (contains7 || (contains5 || !contains3))) {
       result.add(WHIZZ);
     }
     return result.isEmpty() ? numberString : String.join("", result);
