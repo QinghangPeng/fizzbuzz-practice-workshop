@@ -1,0 +1,15 @@
+package com.thoughtworks.school.practice.fizzbuzz;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class FizzBuzzUtilTest {
+
+  @Test
+  void should_return_the_number_when_the_number_is_not_divided_by_3_5_7_and_does_not_contain_3_5_7() {
+    String result = FizzBuzzUtil.fizzbuzz(1);
+
+    assertEquals("1", result);
+  }
+}
