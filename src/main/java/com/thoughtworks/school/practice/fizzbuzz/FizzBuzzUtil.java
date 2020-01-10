@@ -24,7 +24,7 @@ public class FizzBuzzUtil {
     if (number % 5 == 0 && !contains7 && (contains5 || !contains3)) {
       result.add(BUZZ);
     }
-    if (number % 7 == 0 && (contains7 || (contains5 || !contains3))) {
+    if (number % 7 == 0 && (!contains7 && contains5 || !contains3)) {
       result.add(WHIZZ);
     }
     return result.isEmpty() ? numberString : String.join("", result);
