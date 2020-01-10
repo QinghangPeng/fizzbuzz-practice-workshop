@@ -11,15 +11,20 @@ public class FizzBuzzUtil {
 
   public static String fizzbuzz(int number) {
     List<String> result = new ArrayList<>();
-    if (number % 3 == 0) {
+    String numberString = String.valueOf(number);
+    boolean contains3 = numberString.contains("3");
+    if (contains3) {
       result.add(FIZZ);
     }
-    if (number % 5 == 0) {
+    if (number % 3 == 0 && !contains3) {
+      result.add(FIZZ);
+    }
+    if (number % 5 == 0 && !contains3) {
       result.add(BUZZ);
     }
-    if (number % 7 == 0) {
+    if (number % 7 == 0 && !contains3) {
       result.add(WHIZZ);
     }
-    return result.isEmpty() ? String.valueOf(number) : String.join("", result);
+    return result.isEmpty() ? numberString : String.join("", result);
   }
 }
