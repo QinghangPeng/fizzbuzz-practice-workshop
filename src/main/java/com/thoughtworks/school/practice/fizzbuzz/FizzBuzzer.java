@@ -18,7 +18,7 @@ public class FizzBuzzer {
     if (!contains3 && isMultipleOf(digit, 3)) {
       result.add(FIZZ);
     }
-    if (isMultipleOf(digit, 5)) {
+    if (!contains3 && isMultipleOf(digit, 5)) {
       result.add(BUZZ);
     }
     if (isMultipleOf(digit, 7)) {
