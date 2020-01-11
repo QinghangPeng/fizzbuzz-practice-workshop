@@ -1,9 +1,9 @@
-name: build-day-2
+name: build-day-3
 
 on:
   push:
     branches:
-      - day-2
+      - day-3
 
 jobs:
   build:
