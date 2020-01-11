@@ -21,7 +21,7 @@ public class FizzBuzzer {
     if (!contains3 && isMultipleOf(digit, 5)) {
       result.add(BUZZ);
     }
-    if (isMultipleOf(digit, 7)) {
+    if (!contains3 && isMultipleOf(digit, 7)) {
       result.add(WHIZZ);
     }
     return result.isEmpty() ? String.valueOf(digit) : String.join("", result);
