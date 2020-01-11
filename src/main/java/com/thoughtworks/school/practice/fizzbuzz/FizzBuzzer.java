@@ -12,16 +12,17 @@ public class FizzBuzzer {
   public String fizzBuzz(int digit) {
     List<String> result = new ArrayList<>();
     boolean contains3 = String.valueOf(digit).contains("3");
-    if (contains3) {
+    boolean contains5 = String.valueOf(digit).contains("5");
+    if (!contains5 && contains3) {
       result.add(FIZZ);
     }
     if (!contains3 && isMultipleOf(digit, 3)) {
       result.add(FIZZ);
     }
-    if (!contains3 && isMultipleOf(digit, 5)) {
+    if ((contains5 || !contains3) && isMultipleOf(digit, 5)) {
       result.add(BUZZ);
     }
-    if (!contains3 && isMultipleOf(digit, 7)) {
+    if ((contains5 || !contains3) && isMultipleOf(digit, 7)) {
       result.add(WHIZZ);
     }
     return result.isEmpty() ? String.valueOf(digit) : String.join("", result);
