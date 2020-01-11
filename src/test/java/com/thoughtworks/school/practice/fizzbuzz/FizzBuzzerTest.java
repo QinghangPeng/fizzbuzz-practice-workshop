@@ -17,4 +17,9 @@ class FizzBuzzerTest {
   void should_return_fizz_when_it_is_multiple_of_3() {
     assertEquals("Fizz", fizzBuzzer.fizzBuzz(3));
   }
+
+  @Test
+  void should_return_buzz_when_it_is_multiple_of_5() {
+    assertEquals("Buzz", fizzBuzzer.fizzBuzz(5));
+  }
 }
