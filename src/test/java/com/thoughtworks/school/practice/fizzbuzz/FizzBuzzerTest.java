@@ -27,4 +27,9 @@ class FizzBuzzerTest {
   void should_return_whizz_when_it_is_multiple_of_7() {
     assertEquals("Whizz", fizzBuzzer.fizzBuzz(7));
   }
+
+  @Test
+  void should_return_fizz_buzz_when_it_is_multiple_of_3_and_5() {
+    assertEquals("FizzBuzz", fizzBuzzer.fizzBuzz(60));
+  }
 }

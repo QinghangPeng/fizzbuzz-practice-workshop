@@ -1,5 +1,8 @@
 package com.thoughtworks.school.practice.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzer {
 
   private static final String FIZZ = "Fizz";
@@ -7,16 +10,17 @@ public class FizzBuzzer {
   private static final String WHIZZ = "Whizz";
 
   public String fizzBuzz(int digit) {
+    List<String> result = new ArrayList<>();
     if (isMultipleOf(digit, 3)) {
-      return FIZZ;
+      result.add(FIZZ);
     }
     if (isMultipleOf(digit, 5)) {
-      return BUZZ;
+      result.add(BUZZ);
     }
     if (isMultipleOf(digit, 7)) {
-      return WHIZZ;
+      result.add(WHIZZ);
     }
-    return String.valueOf(digit);
+    return result.isEmpty() ? String.valueOf(digit) : String.join("", result);
   }
 
   private boolean isMultipleOf(int digit, int dividedBy) {
