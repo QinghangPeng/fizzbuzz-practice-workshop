@@ -11,6 +11,10 @@ public class FizzBuzzer {
 
   public String fizzBuzz(int digit) {
     List<String> result = new ArrayList<>();
+    boolean contains3 = String.valueOf(digit).contains("3");
+    if (contains3) {
+      result.add(FIZZ);
+    }
     if (isMultipleOf(digit, 3)) {
       result.add(FIZZ);
     }
