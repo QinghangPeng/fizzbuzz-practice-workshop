@@ -15,16 +15,20 @@ public class FizzBuzzer {
     boolean contains3 = digitString.contains("3");
     boolean contains5 = digitString.contains("5");
     boolean contains7 = digitString.contains("7");
-    if ((contains7 || !contains5) && contains3) {
+    boolean enableRulesOf3 = contains7 || !contains5;
+    boolean enableDividedBy3 = enableRulesOf3 && !contains3;
+    boolean enableDividedBy7 = contains5 || !contains3;
+    boolean enableDividedBy5 = !contains7 && enableDividedBy7;
+    if (enableRulesOf3 && contains3) {
       result.add(FIZZ);
     }
-    if (((contains7 || !contains5) && !contains3) && isMultipleOf(digit, 3)) {
+    if (enableDividedBy3 && isMultipleOf(digit, 3)) {
       result.add(FIZZ);
     }
-    if ((!contains7 && (contains5 || !contains3)) && isMultipleOf(digit, 5)) {
+    if (enableDividedBy5 && isMultipleOf(digit, 5)) {
       result.add(BUZZ);
     }
-    if ((contains5 || !contains3) && isMultipleOf(digit, 7)) {
+    if (enableDividedBy7 && isMultipleOf(digit, 7)) {
       result.add(WHIZZ);
     }
     return result.isEmpty() ? digitString : String.join("", result);
