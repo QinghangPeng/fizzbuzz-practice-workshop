@@ -20,12 +20,12 @@ class FizzBuzzerTest {
 
   @Test
   void should_return_buzz_when_it_is_multiple_of_5() {
-    assertEquals("Buzz", fizzBuzzer.fizzBuzz(5));
+    assertEquals("Buzz", fizzBuzzer.fizzBuzz(10));
   }
 
   @Test
   void should_return_whizz_when_it_is_multiple_of_7() {
-    assertEquals("Whizz", fizzBuzzer.fizzBuzz(7));
+    assertEquals("Whizz", fizzBuzzer.fizzBuzz(14));
   }
 
   @Test
