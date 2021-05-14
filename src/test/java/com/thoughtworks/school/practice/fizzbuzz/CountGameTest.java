@@ -26,9 +26,21 @@ class CountGameTest {
         int number = 3;
 
         //when
-        String result = countGame.fizzBuzz(3);
+        String result = countGame.fizzBuzz(number);
 
         //then
         assertEquals("Fizz",result);
+    }
+
+    @Test
+    void should_return_buzz_when_it_is_multiple_of_5() {
+        //give
+        int number = 5;
+
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("Buzz",result);
     }
 }
