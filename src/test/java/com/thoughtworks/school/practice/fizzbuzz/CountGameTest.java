@@ -43,4 +43,16 @@ class CountGameTest {
         //then
         assertEquals("Buzz",result);
     }
+
+    @Test
+    void should_return_whizz_when_it_is_multiple_of_7() {
+        //give
+        int number = 7;
+
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("Whizz",result);
+    }
 }
