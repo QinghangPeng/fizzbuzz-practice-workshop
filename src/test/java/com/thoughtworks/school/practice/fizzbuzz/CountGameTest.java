@@ -20,4 +20,15 @@ class CountGameTest {
         assertEquals("1",result);
     }
 
+    @Test
+    void should_return_fizz_when_it_is_multiple_of_3() {
+        //give
+        int number = 3;
+
+        //when
+        String result = countGame.fizzBuzz(3);
+
+        //then
+        assertEquals("Fizz",result);
+    }
 }
