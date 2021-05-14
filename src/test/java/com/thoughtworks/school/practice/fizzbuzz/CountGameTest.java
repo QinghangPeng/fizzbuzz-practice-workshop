@@ -55,4 +55,51 @@ class CountGameTest {
         //then
         assertEquals("Whizz",result);
     }
+
+    @Test
+    void should_return_fizzbuzz_when_it_is_multiple_of_3_and_5() {
+        //give
+        int number = 3 * 5;
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("FizzBuzz",result);
+    }
+
+    @Test
+    void should_return_fizzwhizz_when_it_is_multiple_of_3_and_7() {
+        //give
+        int number = 3 * 7;
+
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("FizzWhizz",result);
+    }
+
+    @Test
+    void should_return_buzzwhizz_when_it_is_multiple_of_5_and_7() {
+        //give
+        int number = 5 * 7;
+
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("BuzzWhizz",result);
+    }
+
+    @Test
+    void should_return_fizzbuzzwhizz_when_is_is_multiple_of_3_and_5_and_7() {
+        //give
+        int number = 3 * 5 * 7;
+
+        //when
+        String result = countGame.fizzBuzz(number);
+
+        //then
+        assertEquals("FizzBuzzWhizz",result);
+    }
 }
